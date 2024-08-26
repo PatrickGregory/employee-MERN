@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use(cors({
     origin:['http://localhost:3000',""],
-    methods:['POST','GET','DELETE','UPDATE'],
+    methods:['POST','GET','DELETE','UPDATE','PUT'],
     credentials:true,
     optionsSuccessStatus:200
 }))
