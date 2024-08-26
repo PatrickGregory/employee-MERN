@@ -10,7 +10,8 @@ export default function Detail() {
     const [city,setCity] = useState()
 
     useEffect(()=>{
-        axios.get('http://localhost:8080/getuser/'+id)
+        // axios.get('http://localhost:8080/getuser/'+id)
+        axios.get('https://employee-mern-api1.vercel.app/getuser/'+id)
         .then(res => {
             console.log(res)
             setName(res.data.name)

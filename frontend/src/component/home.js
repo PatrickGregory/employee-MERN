@@ -9,13 +9,15 @@ export default function Home() {
     // ])
 
     useEffect(()=>{
-        axios.get('http://localhost:8080/')
+        // axios.get('http://localhost:8080/')
+        axios.get('https://employee-mern-api1.vercel.app/')
         .then(res => setUser(res.data))
         .catch(err => console.log(err))
     },[])
 
     const handleDelete = (id) =>{
-       axios.delete('http://localhost:8080/delete/'+id)
+    //    axios.delete('http://localhost:8080/delete/'+id)
+       axios.delete('https://employee-mern-api1.vercel.app/delete/'+id)
        .then(result=>{
          console.log(result)
          window.location.reload()

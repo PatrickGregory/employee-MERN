@@ -14,7 +14,8 @@ export default function Image() {
     }
 
     useEffect(()=>{
-        axios.get('http://localhost:8080/getImage')
+        // axios.get('http://localhost:8080/getImage')
+        axios.get('https://employee-mern-api1.vercel.app/getImage')
         .then(res =>setImage(res.data[4].image))
         .catch(err => console.log(err))
     }, [])

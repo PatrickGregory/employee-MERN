@@ -25,7 +25,8 @@ export default function Update() {
 
     const handleUpdate = ((e)=>{
         e.preventDefault();
-        axios.put('http://localhost:8080/update/'+id,{name,email,age,city,})
+        // axios.put('http://localhost:8080/update/'+id,{name,email,age,city,})
+        axios.put('https://employee-mern-api1.vercel.app/update/'+id,{name,email,age,city,})
         .then(res=>{
             console.log(res)
             navigate('/home')

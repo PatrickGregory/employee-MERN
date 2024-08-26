@@ -12,7 +12,8 @@ export default function Create() {
 
     const handleSubmit = ((e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8080/register',{name,email,age,city,password})
+        // axios.post('http://localhost:8080/register',{name,email,age,city,password})
+        axios.post('https://employee-mern-api1.vercel.app/register',{name,email,age,city,password})
         .then(res=>{
             console.log(res)
             navigate('/home')
