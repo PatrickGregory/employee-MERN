@@ -9,7 +9,12 @@ const ImageModel = require('./models/image')
 const app = express()
 app.use(express.json())
 app.use(express.static('public'))
-app.use(cors())
+app.use(cors({
+    origin:['http://localhost:3000',""],
+    methods:['POST','GET','DELETE','UPDATE'],
+    credentials:true,
+    optionsSuccessStatus:200
+}))
 // StaffModel.db.registers.updateMany({ $set: { Image: "" } });
 // mongoose.connect('mongodb://localhost:27017/employee')
     mongoose.connect('mongodb+srv://patrickgregoryekene:1517M%40ct0172@cluster0.5ccko.mongodb.net/employee');
