@@ -20,7 +20,7 @@ export default function Detail() {
             setCity(res.data.city)
         })
         .catch(err => console.log(err))
-    },[])
+    },[id])
 
     
   return (

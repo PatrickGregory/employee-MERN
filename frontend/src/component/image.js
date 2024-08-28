@@ -25,7 +25,7 @@ export default function Image() {
       <input type="file" onChange={e=>setFile(e.target.files[0])}/>
       <button onClick={handleUpload}>Upload</button>
       <br />
-      <img src={'https://employee-mern-api1.vercel.app/images/'+image} alt="image" />
+      <img src={'https://employee-mern-api1.vercel.app/images/'+image} alt="user" />
     </div>
   )
 }
