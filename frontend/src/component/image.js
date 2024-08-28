@@ -8,7 +8,8 @@ export default function Image() {
     const handleUpload = (e)=>{
         const formdata = new FormData()
         formdata.append('file',file)
-        axios.post('http://localhost:8080/upload',formdata)
+        // axios.post('http://localhost:8080/upload',formdata)
+        axios.post('https://employee-mern-api1.vercel.app/upload',formdata)
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
     }
@@ -24,7 +25,7 @@ export default function Image() {
       <input type="file" onChange={e=>setFile(e.target.files[0])}/>
       <button onClick={handleUpload}>Upload</button>
       <br />
-      <img src={'http://localhost:8080/images/'+image} alt="image" />
+      <img src={'https://employee-mern-api1.vercel.app/images/'+image} alt="image" />
     </div>
   )
 }

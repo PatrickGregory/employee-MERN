@@ -10,7 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(express.static('public'))
 app.use(cors({
-    origin:['http://localhost:3000',""],
+    origin:['http://localhost:3000','https://employee-mern-bpse.vercel.app/'],
     methods:['POST','GET','DELETE','UPDATE','PUT'],
     credentials:true,
     optionsSuccessStatus:200
