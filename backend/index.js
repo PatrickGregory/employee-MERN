@@ -17,7 +17,8 @@ app.use(cors({
 }))
 // StaffModel.db.registers.updateMany({ $set: { Image: "" } });
 // mongoose.connect('mongodb://localhost:27017/employee')
-    mongoose.connect('mongodb+srv://patrickgregoryekene:1517M%40ct0172@cluster0.5ccko.mongodb.net/employee');
+    // mongoose.connect('mongodb+srv://patrickgregoryekene:1517M%40ct0172@cluster0.5ccko.mongodb.net/employee');
+    mongoose.connect('mongodb+srv://patrickgregoryekene:1517M@ct0172@cluster0.5ccko.mongodb.net/employee?retryWrites=true&w=majority&appName=Cluster0');
 
 
 // image upload
